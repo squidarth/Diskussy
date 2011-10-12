@@ -1,0 +1,14 @@
+{% for post in posts %}
+<div id="messagepart">
+	<div id="posts">
+		{{ post.message }}
+	</div>
+	<div id="from">from
+		{% ifequal post.who None %}
+			Anonymous
+		{% else %}
+			{{ post.who }}
+		{% endifequal %}
+	</div>
+</div>
+{% endfor %}
